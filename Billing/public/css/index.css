@@ -1,0 +1,576 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Courier New", Courier, monospace;
+     /* font-family: 'Roboto', sans-serif; */
+
+}
+
+html, body {
+    overflow: hidden; /* Prevent the entire page from scrolling */
+    height: 100%; /* Ensure the height is 100% */
+}
+
+header{
+height: 10vh;
+background-color: rgb(217, 216, 216);
+position: fixed;
+width: 80%;
+margin-left: 330px;
+border-bottom-right-radius: 60px;
+box-shadow: 0px 0px 10px gray;
+z-index: 1000;
+}
+nav{
+margin-left: 20px;
+
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+
+.logo{
+    box-shadow: 0px 0px 10px gray;
+    height: 190px;
+}
+.side-nav{
+position: fixed;
+background-color: rgb(217, 216, 216);
+box-shadow: 0px 0px 10px gray;
+width: 300px;
+}
+.content{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    margin-left: 30px
+    }
+    .content-img{
+    height: 60px;;
+    }
+    .content-txt{
+    font-size: 20px;
+    font-family: "Courier New", Courier, monospace;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    }
+    .content-txt:hover{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .5s;
+    font-size: 20px;
+    font-weight: 600;
+    }
+    .side-footer{
+        margin-left: 35px;
+        font-size: 27px;
+
+    }
+    .footer-txt{
+        margin-bottom: 8px;
+    }
+    #section1 {
+        min-height: 100vh;
+        overflow: hidden; /* Prevent scrolling */
+    }
+    .dashboard-title {
+        text-align: left;
+
+    }
+
+    .dashboard-card {
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .dashboard-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .card-title {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    hr {
+        border: none;
+        height: 2px;
+        background: #bdc3c7;
+    }
+
+    #section2 {
+        margin-left: 120px;
+        min-height: 100vh;
+        padding-top: 50px;
+        overflow: hidden; /* Prevent scrolling */
+    }
+
+    #section3 {
+        margin-left: 60px;
+        background-color: rgb(255, 255, 255);
+        min-height: 100vh;
+        overflow: hidden; /* Prevent scrolling */
+    }
+
+    #section4 {
+        margin-left: 300px;
+        background-color: rgb(168, 32, 111);
+        min-height: 100vh;
+        overflow: hidden; /* Prevent scrolling */
+    }
+
+
+        .Btn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition-duration: 0.3s;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+            background-color: white;
+            margin-right: 30px;
+            margin-top: -10px;
+            }
+
+            /* plus sign */
+            .sign {
+            width: 100%;
+            transition-duration: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
+
+            .sign svg {
+            width: 17px;
+            }
+
+            .sign svg path {
+            fill: black;
+            }
+            /* text */
+            .text {
+            position: absolute;
+            right: 0%;
+            width: 0%;
+            opacity: 0;
+            color: white;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition-duration: 0.3s;
+            }
+            /* hover effect on button width */
+            .Btn:hover {
+            background-color: black;
+            width: 125px;
+            border-radius: 40px;
+            transition-duration: 0.3s;
+            }
+
+            .Btn:hover .sign {
+            width: 30%;
+            transition-duration: 0.3s;
+            padding-left: 20px;
+            }
+
+            .Btn:hover .sign svg path {
+            fill: white;
+            }
+
+            /* hover effect button's text */
+            .Btn:hover .text {
+            opacity: 1;
+            width: 70%;
+            transition-duration: 0.3s;
+            padding-right: 10px;
+            }
+            /* button click effect*/
+            .Btn:active {
+            transform: translate(2px, 2px);
+            }
+
+       /* Modal background and content */
+       .modal-content {
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Modal header */
+    .modal-header {
+        background-color: #007bff; /* Blue background for Edit and Sales modals */
+        color: white;
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    /* Modal body */
+    .modal-body {
+        font-size: 16px;
+    }
+
+    /* Form fields */
+    .form-control {
+        font-size: 16px;
+        padding: 12px;
+        margin-bottom: 16px;
+        border-radius: 4px;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Form labels */
+    .form-label {
+        font-weight: 500;
+        color: #333;
+    }
+
+    /* Buttons */
+    .btn-primary {
+        background-color: #28a745;
+        border: none;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-primary:hover {
+        background-color: #218838;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border: none;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }
+
+    /* Close button */
+    .btn-close {
+        background: none;
+        border: none;
+        font-size: 30px;
+        color: white;
+    }
+
+    /* Smooth transition for modals */
+    .modal.fade .modal-dialog {
+        transition: transform 0.3s ease-out;
+    }
+
+    .modal.fade.show .modal-dialog {
+        transform: scale(1);
+    }
+
+
+
+
+    /* Styling for Totals Box */
+    .totals-box {
+/*
+        max-width: 280px; */
+        background: #ffffff;
+        border-radius: 10px;
+        padding: 15px 20px; /* Adjusted for better spacing */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    .totals-box:hover {
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        transform: scale(1.03);
+    }
+
+    /* Styling for Total Amount Text */
+    .total-amount {
+        font-size: 1rem; /* Slightly larger font size */
+        font-weight: 600;
+        color: #333;
+    }
+
+    /* Styling for the Total Label */
+    .display-7 {
+        font-size: 1.3rem; /* Adjusted total text size */
+        font-weight: bold;
+        color: #007bff;
+    }
+
+    /* Styling for the Submit Payment Button */
+    .btn-submit-payment {
+        background: linear-gradient(45deg, #4CAF50, #8BC34A); /* Fresh green gradient */
+        color: #fff;
+        font-size: 1rem; /* Slightly larger button text */
+        padding: 8px 15px; /* Adjusted padding */
+        border-radius: 6px;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    }
+
+    /* Button hover effect */
+    .btn-submit-payment:hover {
+        background: linear-gradient(45deg, #43A047, #689F38); /* Darker green on hover */
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        transform: translateY(-2px);
+    }
+
+    /* Remove button outline on focus */
+    .btn-submit-payment:focus {
+        outline: none;
+    }
+
+    .receipt {
+        padding: 20px;
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        border: 1px solid #ddd;
+    }
+    .receipt-header {
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .receipt-footer {
+        font-size: 12px;
+        color: #888;
+    }
+    .table-sm th, .table-sm td {
+        padding: 4px 8px;
+    }
+    .table-sm th {
+        text-align: left;
+    }
+
+
+       /* Keep your current style intact, add optional custom fade-out style */
+       .custom-error-message {
+        /* Use existing error styles here */
+        padding: 15px;
+        background-color: #f8d7da; /* Light red for error */
+        border: 1px solid #f5c6cb;
+        border-radius: 5px;
+        color: #721c24;
+        margin-bottom: 10px;
+    }
+
+
+
+    /* Search Container Styles */
+    #search-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-container{
+        margin-left: 850px;
+    }
+
+    #search-container label {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    #search-container input {
+        padding: 8px;
+        margin-right: 10px;
+        width: 250px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    #search-product-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    #search-product-btn:hover {
+        background-color: #0056b3;
+    }
+
+    /* Modal Styling */
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+        padding-top: 60px; /* Space from top */
+    }
+
+    /* Modal Content (Center and Max Width) */
+    .modal-content {
+        background-color: #fff;
+        margin: 5% auto; /* Center the modal */
+        padding: 20px;
+        border: 1px solid #888;
+        border-radius: 8px;
+        width: 100%; /* Make it full width */
+        max-width: 500px; /* Maximum width */
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Close Button for Modal */
+    .close {
+        color: #aaa;
+        font-size: 28px;
+        font-weight: bold;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* Input and Button Styling */
+    #quantity-input {
+        padding: 8px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    #add-to-sales, #cancel-modal {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    #add-to-sales {
+        background-color: #28a745;
+        color: white;
+    }
+
+    #add-to-sales:hover {
+        background-color: #218838;
+    }
+
+    #cancel-modal {
+        background-color: #dc3545;
+        color: white;
+        margin-left: 10px;
+    }
+
+    #cancel-modal:hover {
+        background-color: #c82333;
+    }
+
+    .quantity-input.text-danger {
+        border: 2px solid red;
+        background-color: #ffe5e5;
+    }
+
+
+    /* Modern Container Styling */
+.modern-container {
+    border-radius: 15px; /* Rounded corners for a sleek look */
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Soft gradient background */
+    padding: 30px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+/* Modern Button Styles */
+.modern-btn {
+    padding: 10px 20px;
+    border-radius: 25px; /* Rounded buttons */
+    font-weight: bold;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for buttons (with color change and scaling) */
+.modern-btn:hover {
+    transform: scale(1.1); /* Slightly enlarges the button */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Add a stronger shadow on hover */
+    background-color: #0056b3; /* Darker color on hover for primary button */
+}
+
+/* Specific button color for Danger button (Clear All Sales) */
+.modern-btn.btn-danger {
+    background-color: #f44336; /* Red background */
+    border: none;
+}
+
+.modern-btn.btn-danger:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Animation for fading and sliding */
+.animated-btn {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Trigger animation on page load */
+button.animated-btn, a.animated-btn {
+    animation: fadeInSlideUp 1s ease forwards;
+    animation-delay: 0.3s; /* Delay to stagger the animations */
+}
+
+/* Keyframe for the fade-in and slide-up animation */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
